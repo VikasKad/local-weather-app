@@ -10,12 +10,12 @@ export class CurrentWeatherComponent implements OnInit {
   current: ICurrentWeather
   constructor(private weather: WeatherService) {
     this.current = {
-      city: 'Bethesda',
-      country: 'US',
-      date: 1234234,
-      image: 'assets/img/sunny.png',
-      temperature: 72,
-      description: 'sunny',
+      city: '',
+      country: '',
+      date: 0,
+      image: '',
+      temperature: 0,
+      description: '',
     } as ICurrentWeather
   }
 

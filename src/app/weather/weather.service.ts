@@ -23,12 +23,12 @@ interface ICurrentWeatherData {
   providedIn: 'root',
 })
 export class WeatherService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   getCurrentWeather(city: string, country: string): Observable<ICurrentWeather> {
     return this.http
       .get<ICurrentWeatherData>(
         `${environment.baseUrl}api.openweathermap.org/data/2.5/weather?` +
-          `q=${city},${country}&appid=${environment.appId}`
+        `q=${city},${country}&appid=${environment.appId}`
       )
       .pipe(map((data) => this.transformToCurrentWeather(data)))
   }
