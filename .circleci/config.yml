@@ -32,11 +32,11 @@ jobs:
       - run: npm run build
       #- run:  npm run test:coverage -- --watch=false
       #- run:  npm run e2e
-      - run:
-          name: Tar & Gzip compiled app
-          command: tar zcf dist.tar.gz dist/local-weather-app
-      - store_artifacts:
-          path: dist.tar.gz
+      # - run:
+      #     name: Tar & Gzip compiled app
+      #     command: tar zcf dist.tar.gz dist/local-weather-app
+      # - store_artifacts:
+      #     path: dist.tar.gz
 
 workflows:
   version: 2
